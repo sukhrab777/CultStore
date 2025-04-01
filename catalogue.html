@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="image/logo_groupe_2.png" alt="logo" width="60px" height="auto">
+            <a href="index.html"><img src="images/logo_groupe_2.png" alt="logo" width="60px" height="auto"></a>
             <button>
                 <svg viewBox="0 0 100 100" width="40" height="40" fill="#000">
                     <rect y="7" width="100" height="15"></rect>
@@ -30,57 +30,130 @@
         </header>
         <main>
 
-            <!-- Menu latéral -->
-            <div class="side-menu" id="sideMenu">
-                <div class="menu-header">
-                    <div>Menu</div>
-                    <div class="close-menu" onclick="closeMenu()">X</div>
-                </div>
-                <div class="menu-content">
-                    <a href="#">inscription</a>
-                    <a href="#">Mon compte</a>
-                    <a href="#">Panier</a>
-                </div>
-                <div class="menu-footer">
-                    <a href="#">Déconnexion</a>
-                </div>
-            </div>
-
             <!-- Diaporama -->
-            <h1>Diaporama</h1>
-            <div id="diapo">
-                <div class="elements">
-                    <figure class="element active">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-
-                    <figure class="element">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-
-                    <figure class="element">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-
-                    <figure class="element">
-                        <img src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-                <span id="flechedroite" role="button">⮕</span>
-                <span id="flechegauche" role="button">⬅</span>
-                <div class="indicators">
-                    <div class="bar active"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="card">
+                        <article>
+                            <img src="" alt="">
+                            <p>Description</p>
+                        </article>
+                    </div>
+                    <div class="card">
+                        <article>
+                            <img src="" alt="">
+                            <p>Description</p>
+                        </article>
+                    </div>
+                    <div class="card">
+                        <article>
+                            <img src="" alt="">
+                            <p>Description</p>
+                        </article>
+                    </div>
                 </div>
             </div>
-            <!--Section Catalogue Produit-->
-            
+
+            <!--Filtres de recherche-->
+            <form action="">
+                <fieldset>
+                    <legend>Thème</legend>
+                    <div>
+                        <input type="checkbox" id="cinema" name="cinema">
+                        <label for="cinéma">Cinéma</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="series" name="series">
+                        <label for="séries">Séries</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="animes" name="animes">
+                        <label for="animes">Animés</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Produits</legend>
+                    <div>
+                        <input type="checkbox" id="figurine" name="figurine">
+                        <label for="figurine">Cinéma</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="poster" name="poster">
+                        <label for="poster">Poster</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="mugs" name="mugs">
+                        <label for="mugs">Mugs</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="vetements" name="vetements">
+                        <label for="vetements">Vêtements</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="autres" name="autres">
+                        <label for="autres">Autres</label>
+                    </div>
+                </fieldset>
+            </form>
+        <!-- Filtre de tri d'affichage -->
+            <form action="">
+                <fieldset>
+                    <legend>Ordre d'affichage</legend>
+                    <div>
+                        <input type="checkbox" id="croissant" name="croissant">
+                        <label for="croissant">Croissant</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="decroissant" name="decroissant">
+                        <label for="decroissant">Décroissant</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nouveautés" name="nouveautés">
+                        <label for="nouveautés">Nouveautés</label>
+                    </div>
+                </fieldset>
+            </form>
+
+
+            <!-- Produits -->
+            <div class="catalogue">
+                <div class="produit" data-order="nouveauté"data-theme="cinema" data-style="figurine" data-price="29.99">
+                    <a href=""><img src="image/Fig Hulk.png" alt=""></a>
+                    <p>Figurine Hulk</p>
+                    <p>29,99 €</p>
+                    <a href="produit.html">Voir le produit</a>
+                </div>
+                <div class="produit" data-theme="animes" data-style="figurine" data-price="29.99">
+                    <a href=""><img src="image/Fig Luffy.png" alt=""></a>
+                    <p>Figurine Luffy</p>
+                    <p>29,99 €</p>
+                    <a href="produit.html">Voir le produit</a>
+                </div>
+                <div class="produit" data-theme="animes" data-style="mugs" data-price="15.99">
+                    <a href=""><img src="image/Mug Chiro.png" alt=""></a>
+                    <p>Mug Chiro</p>
+                    <p>15,99 €</p>
+                    <a href="produit.html">Voir le produit</a>
+                </div>
+                <div class="produit" data-theme="animes" data-style="mugs" data-price="15.99">
+                    <a href=""><img src="image/Mug Gto.png" alt=""></a>
+                    <p>Mug Gto</p>
+                    <p>15,99 €</p>
+                    <a href="produit.html">Voir le produit</a>
+                </div>
+                <div class="produit" data-theme="cinema" data-style="poster" data-price="29.99">
+                    <a href=""><img src="image/Poster Pulp Fiction.png" alt=""></a>
+                    <p>Poster Pulp Fiction</p>
+                    <p>29,99 €</p>
+                    <a href="produit.html">Voir le produit</a>
+                </div>
+                <div class="produit" data-theme="series" data-style="autres" data-price="9.99">
+                    <a href=""><img src="image/Chaussettes Stranger Thing.png" alt=""></a>
+                    <p>Chaussettes Stranger Things</p>
+                    <p>9,99 €</p>
+                    <a href="produit.html">Voir le produit</a>
+                </div>
+            </div>
         </main>
         <footer>
             <!--Barre de Navigation en mode Fixed en bas d'écran, vu mobile et tablette-->
